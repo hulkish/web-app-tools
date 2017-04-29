@@ -22,6 +22,7 @@
     "babel-preset-env": "next"
   },
   "scripts": {
+    "prepublish": "npm run -s build:prod",
     "clean": "rimraf lib",
     "build": "run-s clean build:babel",
     "build:prod": "cross-env NODE_ENV=production npm run -s build",

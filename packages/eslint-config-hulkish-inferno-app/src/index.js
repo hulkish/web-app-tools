@@ -20,10 +20,10 @@ export default {
   },
   settings: {
     'import/ignore': ['node_modules'],
-    'import/extensions': ['.js'],
+    'import/extensions': ['.js', '.jsx'],
     'import/resolver': {
       node: {
-        extensions: ['.js', '.json']
+        extensions: ['.js', '.jsx', '.json']
       }
     }
   },
@@ -128,10 +128,12 @@ export default {
     'no-restricted-properties': ['error', {
       object: 'require',
       property: 'ensure',
+      // eslint-disable-next-line max-len
       message: 'Please use import() instead. More info: https://webpack.js.org/guides/code-splitting-import/#dynamic-import',
     }, {
       object: 'System',
       property: 'import',
+      // eslint-disable-next-line max-len
       message: 'Please use import() instead. More info: https://webpack.js.org/guides/code-splitting-import/#dynamic-import',
     }],
     'import/default': 'warn',
