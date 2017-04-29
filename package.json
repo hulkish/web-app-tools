@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hulkish/web-app-tools.git"
+  },
   "devDependencies": {
     "ava": "^0.19.1",
     "babel-cli": "next",

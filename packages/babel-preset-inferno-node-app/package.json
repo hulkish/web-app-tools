@@ -1,7 +1,11 @@
 {
   "name": "babel-preset-inferno-node-app",
-  "version": "1.0.1-1.0.0-0.0",
+  "version": "1.0.1-1.0.0-0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hulkish/web-app-tools.git"
+  },
   "directories": {
     "lib": "lib"
   },
