@@ -1,0 +1,28 @@
+{
+  "name": "babel-preset-inferno-node-app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "peerDependencies": {
+    "babel-core": "next"
+  },
+  "dependencies": {
+    "babel-plugin-dynamic-import-node": "next",
+    "babel-plugin-inferno": "^3.2.0",
+    "babel-plugin-syntax-dynamic-import": "next",
+    "babel-plugin-syntax-jsx": "next",
+    "babel-plugin-transform-react-constant-elements": "next",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.3",
+    "babel-preset-env": "next"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "run-s clean build:babel",
+    "build:prod": "cross-env NODE_ENV=production npm run -s build",
+    "build:babel": "babel src -d lib",
+    "build:watch": "run-s clean babel:watch",
+    "build:babel:watch": "babel src -wd lib"
+  }
+}

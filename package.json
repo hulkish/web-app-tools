@@ -1,0 +1,31 @@
+{
+  "name": "web-app-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-cli": "next",
+    "babel-preset-env": "next",
+    "cross-env": "^4.0.0",
+    "eslint": "^3.19.0",
+    "husky": "^0.13.3",
+    "lerna": "^2.0.0-rc.4",
+    "lint-staged": "^3.4.1",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^10.2.0",
+    "rimraf": "^2.6.1",
+    "source-map-support": "^0.4.15"
+  },
+  "lint-staged": {
+    "packages/*/src/**/*.{js,jsx}": "eslint --quiet"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna run clean",
+    "build": "run-s clean build:lerna",
+    "build:prod": "cross-env NODE_ENV=production npm run -s build",
+    "build:lerna": "lerna run build"
+  }
+}

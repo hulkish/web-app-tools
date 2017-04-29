@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-hulkish-inferno-app",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-inferno": "^6.10.4",
+    "eslint-plugin-jsx-a11y": "^4.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "run-s clean build:babel",
+    "build:prod": "cross-env NODE_ENV=production npm run -s build",
+    "build:babel": "babel src -d lib",
+    "build:watch": "run-s clean babel:watch",
+    "build:babel:watch": "babel src -wd lib"
+  }
+}
