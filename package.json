@@ -13,6 +13,7 @@
     "babel-preset-env": "next",
     "cross-env": "^4.0.0",
     "eslint": "^3.19.0",
+    "eslint-config-hulkish-inferno-app": "^1.0.1-1.0.0-0.1",
     "husky": "^0.13.3",
     "lerna": "^2.0.0-rc.4",
     "lint-staged": "^3.4.1",
